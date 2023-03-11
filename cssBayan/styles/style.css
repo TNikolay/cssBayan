@@ -1,0 +1,73 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+h1 {
+  padding: 30px;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.accordion {
+  cursor: pointer;
+  width: 100%;
+}
+
+.accordion-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.icon-open {
+  display: none;
+}
+
+.accordion:hover .icon-open {
+  display: inline;
+}
+
+.accordion-radio:checked ~ .accordion-title > .icon-open {
+  transform: rotate(45deg);
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid grey;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-top: 1rem;
+}
+
+.accordion-content {
+  cursor: pointer;
+  display: none;
+}
+
+.accordion-radio:checked ~ .accordion-content {
+  display: block;
+}
+
+.accordion-radio:hover ~ .accordion-content {
+  display: block;
+}
+
+.accordion-radio:hover ~ .accordion-title > .icon-open {
+  transform: rotate(45deg);
+}
