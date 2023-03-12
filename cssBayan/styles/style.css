@@ -1,11 +1,11 @@
 html {
-  font-size: 18px;
+  font-size: 20px;
   scrollbar-gutter: stable both-edges;
 }
 
 body {
   min-height: 100vh;
-  background-color: white;
+  min-width: 320px;
 }
 
 .wrapper {
@@ -20,7 +20,7 @@ body {
 h1 {
   padding: 30px;
   margin: 0;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .accordion {
@@ -37,49 +37,86 @@ h1 {
   padding: 0;
 }
 
-.icon-open {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.accordion:hover .icon-open {
-  opacity: 1;
-}
-
 .accordion-radio:checked ~ .accordion-title > .icon-open {
   transform: rotate(45deg);
+  transition: 0.3s;
 }
 .accordion-label {
-    cursor: pointer;
-    transition: opacity 0.3s;
+  cursor: pointer;
+  transition: opacity 0.3s;
 }
 .accordion-label:active {
-    opacity: 0.5;
+  opacity: 0.5;
 }
+
 
 .accordion-title {
   display: flex;
   justify-content: space-between;
   border-top: 0.2rem solid grey;
   font-size: 1.5rem;
+  color: blue;
   padding: 1rem 0;
-}
 
-.accordion-radio:hover ~ .accordion-title > .icon-open {
-  transform: rotate(45deg);
 }
 
 .accordion-img {
-    display: block;
-    margin: 0 auto;
-    width: 0;
-    transition: width 0.4s;
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  transition: width 0.4s;
 }
 
-.accordion-radio:checked ~  .accordion-img {
+.accordion-radio:checked ~ .accordion-title {
+    color: black;
+  }
+  
+.accordion-radio:checked ~ .accordion-img {
+  width: 50%;
+}
+
+@media (hover: hover) {
+  .accordion-radio:hover ~ .accordion-img {
     width: 50%;
+  }
+
+  .accordion:hover .accordion-title {
+    color: black;
+  }
+
+  .accordion-radio:hover ~ .accordion-title > .icon-open {
+    transform: rotate(45deg);
+  }
+
+  .icon-open {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .accordion:hover .icon-open {
+    opacity: 1;
+  }
 }
 
-.accordion-radio:hover ~  .accordion-img {
-     width: 50%; 
+
+.accordion-label:active >.accordion-title  {
+    color: blue;
+}
+
+
+@media (max-width: 900px) {
+    html {
+        font-size: 16px;
+    }
+    body {
+        background-color:aquamarine ;
+    }         
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }         
+    body {
+        background-color:brown ;
+    }         
 }
