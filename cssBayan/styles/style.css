@@ -1,11 +1,10 @@
 html {
-  font-size: 20px;
+  font-size: 1rem;
   scrollbar-gutter: stable both-edges;
 }
 
 body {
   min-height: 100vh;
-  min-width: 320px;
 }
 
 .wrapper {
@@ -18,7 +17,7 @@ body {
 }
 
 h1 {
-  padding: 30px;
+  padding: 3rem;
   margin: 0;
   font-size: 3rem;
 }
@@ -36,6 +35,10 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+.icon-open {
+    width: 2rem;
+ }
 
 .accordion-radio:checked ~ .accordion-title > .icon-open {
   transform: rotate(45deg);
@@ -105,18 +108,12 @@ h1 {
 
 @media (max-width: 900px) {
     html {
-        font-size: 16px;
+        font-size: 0.8rem;
     }
-    body {
-        background-color:aquamarine ;
-    }         
 }
 
 @media (max-width: 600px) {
     html {
-        font-size: 12px;
-    }         
-    body {
-        background-color:brown ;
+        font-size: 0.5rem;
     }         
 }
